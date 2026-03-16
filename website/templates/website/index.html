@@ -1,0 +1,558 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahima Baldé | Portfolio Data Science</title>
+    <meta name="description" content="Portfolio premium d'Ibrahima Baldé, étudiant en Data Science et Intelligence Artificielle.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-grid"></div>cd
+
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="brand">
+                <span class="brand-mark">
+                    <span class="brand-dot"></span>
+                </span>
+                <span class="brand-text">Portfolio</span>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="#education">Formation</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-grid">
+
+                <div class="hero-photo-wrap reveal">
+                    <div class="hero-photo-shell">
+                        <div class="hero-photo-frame">
+                            <img src="{% static 'website/images/profile.PNG' %}" alt="Photo de Ibrahima Baldé">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-content reveal reveal-delay-1">
+                    <div class="hero-badge">
+                        <i class="fa-solid fa-sparkles"></i>
+                        Étudiant en Data Science & Intelligence Artificielle
+                    </div>
+
+                    <h1>Ibrahima Baldé</h1>
+
+                    <p class="hero-lead">
+                        Je conçois des solutions data, statistiques et machine learning orientées analyse, prédiction et aide à la décision.
+                    </p>
+
+                    <p class="hero-description">
+                        Passionné par l’exploitation intelligente des données, je développe des projets qui combinent rigueur analytique, modélisation statistique et compréhension métier pour produire des solutions fiables, lisibles et impactantes.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Voir mes projets
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fa-solid fa-envelope"></i>
+                            Me contacter
+                        </a>
+                    </div>
+
+                    <div class="hero-socials">
+                        <a href="https://github.com/IbrahimaBalde09?tab=repositories" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github"></i>
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                    </div>
+
+                    <div class="hero-tags">
+                        <span class="hero-tag"><i class="fa-solid fa-location-dot"></i>Lille, France</span>
+                        <span class="hero-tag"><i class="fa-solid fa-database"></i>Data Science</span>
+                        <span class="hero-tag"><i class="fa-solid fa-brain"></i>IA</span>
+                        <span class="hero-tag"><i class="fa-solid fa-chart-line"></i>Modélisation</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section-light reveal" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-kicker">Présentation</span>
+                <h2 class="section-title">À propos</h2>
+                <p class="section-subtitle">
+                    Un profil orienté data science, modélisation et aide à la décision.
+                </p>
+            </div>
+
+            <div class="about-card premium-card">
+                <p>
+                    Étudiant en Data Science et Intelligence Artificielle, je m’intéresse à la conception de solutions capables de transformer les données en leviers de compréhension, d’optimisation et de décision.
+                </p>
+                <p>
+                    Mon objectif est de développer des systèmes fiables, lisibles et performants, en combinant analyse de données, modélisation statistique, machine learning et logique métier.
+                </p>
+                <p>
+                    J’apprécie particulièrement les projets où la technique répond à une problématique concrète : prédire, planifier, classer, segmenter ou aider à décider de manière plus pertinente.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-light reveal" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-kicker">Expertise</span>
+                <h2 class="section-title">Compétences</h2>
+                <p class="section-subtitle">
+                    Des compétences techniques appliquées à des problématiques réelles.
+                </p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card premium-card reveal">
+                    <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+                    <h3>Python & Analyse de données</h3>
+                    <p>NumPy, Pandas, SciPy, préparation, structuration, nettoyage et exploration de données.</p>
+                </div>
+
+                <div class="skill-card premium-card reveal reveal-delay-1">
+                    <div class="skill-icon"><i class="fa-solid fa-robot"></i></div>
+                    <h3>Machine Learning</h3>
+                    <p>Classification, régression, clustering, évaluation de modèles et interprétation.</p>
+                </div>
+
+                <div class="skill-card premium-card reveal reveal-delay-2">
+                    <div class="skill-icon"><i class="fa-solid fa-chart-column"></i></div>
+                    <h3>Visualisation</h3>
+                    <p>Présentation claire des résultats, visualisations analytiques et restitution métier.</p>
+                </div>
+
+                <div class="skill-card premium-card reveal">
+                    <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Statistiques & Modélisation</h3>
+                    <p>Régression logistique, arbres de décision, K-means, analyse statistique et modélisation.</p>
+                </div>
+
+                <div class="skill-card premium-card reveal reveal-delay-1">
+                    <div class="skill-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <h3>Intelligence Artificielle</h3>
+                    <p>Fondamentaux IA, logique de modèles intelligents et intégration dans des cas d’usage.</p>
+                </div>
+
+                <div class="skill-card premium-card reveal reveal-delay-2">
+                    <div class="skill-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                    <h3>Optimisation & Planification</h3>
+                    <p>Contraintes métier, organisation, systèmes d’aide à la décision et logique de planification.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-light reveal" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-kicker">Parcours</span>
+                <h2 class="section-title">Formation</h2>
+                <p class="section-subtitle">
+                    Une formation tournée vers la pratique, la rigueur et les cas d’usage.
+                </p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card premium-card">
+                        <span class="timeline-date">2024 – Présent</span>
+                        <h3>Parcours en Data Science & Intelligence Artificielle</h3>
+                        <p>
+                            Formation orientée analyse de données, modélisation statistique, machine learning, visualisation et développement de solutions intelligentes appliquées à des problématiques concrètes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-light reveal" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-kicker">Réalisations</span>
+                <h2 class="section-title">Projets</h2>
+                <p class="section-subtitle">
+                    Mes projets les plus représentatifs en planification, analyse et visualisation de données.
+                </p>
+            </div>
+
+            <div class="projects-list">
+
+                <article class="project-card premium-card reveal tilt-card project-card-gallery">
+                    <div class="planning-gallery">
+                        <img src="{% static 'website/images/planning-1.png' %}" alt="Capture planning 1">
+                        <img src="{% static 'website/images/planning-2.png' %}" alt="Capture planning 2">
+                        <img src="{% static 'website/images/planning-3.png' %}" alt="Capture planning 3">
+                        <img src="{% static 'website/images/planning-4.png' %}" alt="Capture planning 4">
+                        <img src="{% static 'website/images/planning-5.png' %}" alt="Capture planning 5">
+                        <img src="{% static 'website/images/planning-6.png' %}" alt="Capture planning 6">
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-topline">
+                            <span class="project-pill">Planification</span>
+                            <span class="project-pill muted-pill">Aide à la décision</span>
+                        </div>
+
+                        <h3 class="project-title">Planning des gardes de médecins</h3>
+
+                        <p class="project-description">
+                            Application d’aide à la planification des gardes aux urgences intégrant les contraintes d’organisation, de disponibilité et d’équilibre de répartition. Les captures ci-contre montrent différentes vues du système et du workflow de planification.
+                        </p>
+
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Optimisation</span>
+                            <span class="tech-badge">Scheduling</span>
+                            <span class="tech-badge">Décision</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <button class="project-btn project-btn-primary" type="button" onclick="openModal('planningModal')">
+                                <i class="fa-solid fa-file-lines"></i>
+                                Description
+                            </button>
+                            <a href="https://github.com/IbrahimaBalde09?tab=repositories" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
+                                <i class="fa-brands fa-github"></i>
+                                Voir le projet GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card premium-card reveal reveal-delay-1 tilt-card">
+                    <div class="project-visual project-visual-credit">
+                        <div class="project-overlay"></div>
+                        <div class="project-visual-content">
+                            <span class="project-visual-label">Projet 02</span>
+                            <h4>Scoring & analyse du risque</h4>
+                            <p>Machine Learning • Interprétation • Décision</p>
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-topline">
+                            <span class="project-pill">Machine Learning</span>
+                            <span class="project-pill muted-pill">Crédit Scoring</span>
+                        </div>
+
+                        <h3 class="project-title">Crédit scoring</h3>
+
+                        <p class="project-description">
+                            Application web intelligente de credit scoring conçue pour estimer le risque de défaut d’un emprunteur, automatiser l’aide à la décision et restituer les résultats à travers une interface analytique claire et exploitable.
+                        </p>
+
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Classification</span>
+                            <span class="tech-badge">Scikit-learn</span>
+                            <span class="tech-badge">Risk Analysis</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <button class="project-btn project-btn-primary" type="button" onclick="openModal('creditModal')">
+                                <i class="fa-solid fa-file-lines"></i>
+                                Description
+                            </button>
+                            <a href="https://github.com/IbrahimaBalde09?tab=repositories" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
+                                <i class="fa-brands fa-github"></i>
+                                Voir le projet GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card premium-card reveal reveal-delay-2 tilt-card">
+                    <div class="project-visual project-visual-stats">
+                        <div class="project-overlay"></div>
+                        <div class="project-visual-content">
+                            <span class="project-visual-label">Projet 03</span>
+                            <h4>Prédiction & modélisation</h4>
+                            <p>Statistiques • Clustering • Performance</p>
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-topline">
+                            <span class="project-pill">Statistiques</span>
+                            <span class="project-pill muted-pill">Machine Learning</span>
+                        </div>
+
+                        <h3 class="project-title">Modélisation statistique</h3>
+
+                        <p class="project-description">
+                            Étude d’algorithmes de modélisation statistique pour la prédiction, la classification et le clustering.
+                        </p>
+
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Régression</span>
+                            <span class="tech-badge">Clustering</span>
+                            <span class="tech-badge">Analyse</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <a href="#" class="project-btn project-btn-primary">
+                                <i class="fa-solid fa-file-lines"></i>
+                                Description
+                            </a>
+                            <a href="https://github.com/IbrahimaBalde09?tab=repositories" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
+                                <i class="fa-brands fa-github"></i>
+                                Voir le projet GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card premium-card reveal tilt-card">
+                    <div class="project-visual project-visual-dashboard">
+                        <div class="project-overlay"></div>
+                        <div class="project-visual-content">
+                            <span class="project-visual-label">Projet 04</span>
+                            <h4>Dashboard Power BI</h4>
+                            <p>Business Intelligence • KPI • Visualisation</p>
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-topline">
+                            <span class="project-pill">Power BI</span>
+                            <span class="project-pill muted-pill">Dashboard</span>
+                        </div>
+
+                        <h3 class="project-title">Dashboard analytique Power BI</h3>
+
+                        <p class="project-description">
+                            Tableau de bord Power BI conçu pour suivre des indicateurs clés, visualiser les performances et faciliter l’analyse décisionnelle. Le fichier PBIX est intégré au projet pour téléchargement ou ouverture locale dans Power BI Desktop.
+                        </p>
+
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Power BI</span>
+                            <span class="tech-badge">Data Viz</span>
+                            <span class="tech-badge">KPI</span>
+                            <span class="tech-badge">Reporting</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <a href="{% static 'website/images/projet_dashboard.pbix' %}" class="project-btn project-btn-primary" download>
+                                <i class="fa-solid fa-download"></i>
+                                Télécharger le fichier PBIX
+                            </a>
+                            <a href="{% static 'website/images/projet_dashboard.pbix' %}" class="project-btn project-btn-secondary" target="_blank">
+                                <i class="fa-solid fa-chart-simple"></i>
+                                Ouvrir le fichier
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section-light reveal" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-kicker">Contact</span>
+                <h2 class="section-title">Me contacter</h2>
+                <p class="section-subtitle">
+                    Disponible pour échanger autour d’un projet, d’une collaboration ou d’une opportunité.
+                </p>
+            </div>
+
+            <div class="contact-card premium-card">
+                <p>
+                    Je suis intéressé par les projets en data science, intelligence artificielle, modélisation statistique, visualisation et aide à la décision.
+                </p>
+                <p>
+                    Tu peux me contacter par e-mail ou via LinkedIn pour discuter d’une collaboration, d’un stage, d’une alternance ou d’un projet.
+                </p>
+
+                <div class="contact-actions">
+                    <a href="mailto:tonemail@example.com" class="btn btn-primary">
+                        <i class="fa-solid fa-envelope"></i>
+                        M’envoyer un email
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-dark-text">
+                        <i class="fa-brands fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL DESCRIPTION PROJET PLANNING -->
+    <div class="project-modal" id="planningModal">
+        <div class="project-modal-backdrop" onclick="closeModal('planningModal')"></div>
+
+        <div class="project-modal-box">
+            <button class="project-modal-close" type="button" onclick="closeModal('planningModal')">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="project-modal-content">
+                <span class="project-modal-kicker">Projet médical • Aide à la décision</span>
+
+                <h3 class="project-modal-title">Planning des gardes de médecins</h3>
+
+                <p class="project-modal-text">
+                    Planning des gardes de médecins est une application conçue pour répondre à une problématique réelle de planification dans le domaine médical.
+                </p>
+
+                <p class="project-modal-text">
+                    Son objectif est d’aider à organiser les gardes en tenant compte des disponibilités, des contraintes opérationnelles et de l’équilibre de répartition entre praticiens.
+                </p>
+
+                <p class="project-modal-text">
+                    Ce projet illustre ma capacité à transformer un besoin métier concret en solution fonctionnelle, en combinant logique applicative, structuration des données, gestion de contraintes et visualisation claire de l’information.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DESCRIPTION PROJET CREDIT SCORING -->
+    <div class="project-modal" id="creditModal">
+        <div class="project-modal-backdrop" onclick="closeModal('creditModal')"></div>
+
+        <div class="project-modal-box">
+            <button class="project-modal-close" type="button" onclick="closeModal('creditModal')">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="project-modal-content">
+                <span class="project-modal-kicker">Projet finance • Machine Learning</span>
+
+                <h3 class="project-modal-title">Crédit scoring</h3>
+
+                <p class="project-modal-text">
+                    Ce projet porte sur le développement d’une application web de credit scoring permettant d’évaluer automatiquement le risque de défaut d’un emprunteur grâce à l’intégration d’un modèle de machine learning dans une architecture Django.
+                </p>
+
+                <p class="project-modal-text">
+                    L’application exploite les données financières et personnelles des demandeurs de crédit — telles que le revenu, le montant du prêt, le taux d’endettement ou encore l’historique de crédit — afin d’estimer une probabilité de défaut et de générer une décision d’aide à l’octroi : accepté, à examiner ou refusé.
+                </p>
+
+                <p class="project-modal-text">
+                    Le projet s’inscrit dans une démarche complète de data science, allant du nettoyage des données et de l’analyse exploratoire jusqu’au feature engineering, à l’entraînement et à l’évaluation de plusieurs modèles de classification, notamment la régression logistique, Random Forest et Gradient Boosting.
+                </p>
+
+                <p class="project-modal-text">
+                    La sélection du modèle repose sur des indicateurs de performance pertinents comme le ROC-AUC, la précision, le rappel et le F1-score, afin de garantir une évaluation robuste et adaptée aux enjeux métier liés au risque de crédit.
+                </p>
+
+                <p class="project-modal-text">
+                    Un dashboard analytique complète l’application en offrant une visualisation claire des indicateurs clés du portefeuille, comme la probabilité moyenne de défaut, le taux d’acceptation et la distribution des scores de risque. Les résultats sont stockés dans PostgreSQL et peuvent être exportés en CSV ou en PDF.
+                </p>
+
+                <p class="project-modal-text">
+                    Technologies utilisées : Python, Django, PostgreSQL, Pandas, NumPy, Scikit-learn, XGBoost, Matplotlib et Seaborn.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.reveal').forEach((el) => {
+            observer.observe(el);
+        });
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 24) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+
+        const cards = document.querySelectorAll('.tilt-card');
+
+        cards.forEach((card) => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const rotateX = ((y - centerY) / centerY) * -4;
+                const rotateY = ((x - centerX) / centerX) * 4;
+
+                card.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1200px) rotateX(0deg) rotateY(0deg) translateY(0)';
+            });
+        });
+
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('active');
+            document.body.classList.add('modal-open');
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('active');
+            document.body.classList.remove('modal-open');
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.project-modal.active').forEach((modal) => {
+                    modal.classList.remove('active');
+                });
+                document.body.classList.remove('modal-open');
+            }
+        });
+    </script>
+
+</body>
+</html>

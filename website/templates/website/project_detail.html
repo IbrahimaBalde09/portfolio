@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ project.title }} | Portfolio</title>
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="detail-header">
+    <div class="container reveal">
+        <a href="{% url 'home' %}" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i> Retour au portfolio
+        </a>
+
+        <div class="detail-card">
+            <span class="project-category">
+                <i class="fa-solid fa-layer-group"></i> {{ project.category }}
+            </span>
+            <span class="project-status">
+                <i class="fa-solid fa-clock"></i> {{ project.status }}
+            </span>
+
+            <h1>{{ project.title }}</h1>
+            <p class="detail-description">{{ project.long_description }}</p>
+
+            <div class="tech-list">
+                {% for tech in project.technologies %}
+                <span class="skill-badge">
+                    {% if tech == "Python" %}
+                        <i class="fab fa-python"></i>
+                    {% elif tech == "SQL" %}
+                        <i class="fa-solid fa-database"></i>
+                    {% elif tech == "R" %}
+                        <i class="fa-solid fa-chart-area"></i>
+                    {% elif tech == "JavaScript" %}
+                        <i class="fab fa-js"></i>
+                    {% elif tech == "Django" %}
+                        <i class="fa-solid fa-code-branch"></i>
+                    {% elif tech == "HTML" %}
+                        <i class="fab fa-html5"></i>
+                    {% elif tech == "CSS" %}
+                        <i class="fab fa-css3-alt"></i>
+                    {% elif tech == "Power BI" %}
+                        <i class="fa-solid fa-chart-column"></i>
+                    {% elif tech == "Business Intelligence" %}
+                        <i class="fa-solid fa-lightbulb"></i>
+                    {% elif tech == "Data Visualisation" %}
+                        <i class="fa-solid fa-chart-pie"></i>
+                    {% elif tech == "Excel" %}
+                        <i class="fa-solid fa-file-excel"></i>
+                    {% elif tech == "Orange Data Mining" %}
+                        <i class="fa-solid fa-cubes"></i>
+                    {% elif tech == "Statistiques" %}
+                        <i class="fa-solid fa-square-root-variable"></i>
+                    {% elif tech == "Machine Learning" %}
+                        <i class="fa-solid fa-robot"></i>
+                    {% elif tech == "Scikit-learn" %}
+                        <i class="fa-solid fa-gears"></i>
+                    {% elif tech == "Pandas" %}
+                        <i class="fa-solid fa-table"></i>
+                    {% else %}
+                        <i class="fa-solid fa-code"></i>
+                    {% endif %}
+                    {{ tech }}
+                </span>
+                {% endfor %}
+            </div>
+
+            <div class="project-actions">
+                {% if project.github %}
+                <a href="{{ project.github }}" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                {% endif %}
+
+                {% if project.file %}
+                <a href="{% static project.file %}" download class="btn btn-secondary">
+                    <i class="fa-solid fa-download"></i> Télécharger le fichier
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="section container reveal">
+    {% if project.images %}
+    <h2><i class="fa-solid fa-image"></i> Galerie</h2>
+    <div class="project-gallery large-gallery">
+        {% for image in project.images %}
+        <img src="{% static image %}" alt="{{ project.title }}">
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>Aucune image disponible pour ce projet pour le moment.</p>
+    {% endif %}
+</main>
+
+<script src="{% static 'website/js/script.js' %}"></script>
+</body>
+</html>

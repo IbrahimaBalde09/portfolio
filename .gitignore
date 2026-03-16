@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual env
+.venv/
+venv/
+
+# Django
+db.sqlite3
+staticfiles/
+
+# IDE
+.idea/
+.vscode/
+
+# Node
+node_modules/
+
+# Heavy files not needed
+*.pbix
+*.pdf
