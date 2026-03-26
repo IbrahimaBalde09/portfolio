@@ -3,15 +3,17 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# 🔐 Sécurité
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-change-this-key-later')
 
-# DEBUG géré par Railway
+# 🔧 Debug géré par Railway
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-# Autoriser Railway
+# 🌍 Autoriser Railway
 ALLOWED_HOSTS = ['*']
 
 
+# 📦 Applications
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -23,9 +25,13 @@ INSTALLED_APPS = [
 ]
 
 
+# ⚙️ Middleware
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+
+    # 🔥 IMPORTANT pour servir les fichiers statiques en prod
     'whitenoise.middleware.WhiteNoiseMiddleware',
+
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -38,6 +44,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'portfolio.urls'
 
 
+# 🎨 Templates
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -58,6 +65,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 
+# 🗄️ Base de données
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -66,6 +74,7 @@ DATABASES = {
 }
 
 
+# 🔐 Mots de passe
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -82,19 +91,28 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+# 🌍 Internationalisation
 LANGUAGE_CODE = 'fr-fr'
-
 TIME_ZONE = 'Europe/Paris'
-
 USE_I18N = True
-
 USE_TZ = True
 
 
-# Static files
+# 📁 STATIC FILES (🔥 CRUCIAL POUR RAILWAY)
+
 STATIC_URL = '/static/'
+
+# 👉 Dossier où Django va chercher tes fichiers static
+STATICFILES_DIRS = [
+    BASE_DIR / "website" / "static",
+]
+
+# 👉 Dossier final utilisé en production
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# 👉 Optimisation et compatibilité Railway
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
+# 🔢 Default ID
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
