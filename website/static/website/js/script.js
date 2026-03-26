@@ -7,7 +7,7 @@ const revealOnScroll = () => {
     revealElements.forEach((element) => {
         const windowHeight = window.innerHeight;
         const elementTop = element.getBoundingClientRect().top;
-        const visibleOffset = 100;
+        const visibleOffset = 110;
 
         if (elementTop < windowHeight - visibleOffset) {
             element.classList.add("visible");
@@ -18,50 +18,228 @@ const revealOnScroll = () => {
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 
-/* Carousel dashboard */
-const carousels = document.querySelectorAll("[data-carousel]");
+/* Navbar au scroll */
+const navbar = document.getElementById("navbar");
 
-carousels.forEach((carousel) => {
-    const slides = carousel.querySelectorAll("[data-carousel-slide]");
-    const prevBtn = carousel.querySelector("[data-carousel-prev]");
-    const nextBtn = carousel.querySelector("[data-carousel-next]");
-    const dotsContainer = carousel.parentElement.querySelector(".carousel-dots");
-    const dots = dotsContainer ? dotsContainer.querySelectorAll("[data-carousel-dot]") : [];
+window.addEventListener("scroll", () => {
+    if (!navbar) return;
 
-    let currentIndex = 0;
-
-    const updateCarousel = (index) => {
-        slides.forEach((slide, i) => {
-            slide.classList.toggle("active", i === index);
-        });
-
-        dots.forEach((dot, i) => {
-            dot.classList.toggle("active", i === index);
-        });
-
-        currentIndex = index;
-    };
-
-    if (prevBtn) {
-        prevBtn.addEventListener("click", () => {
-            const newIndex = currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
-            updateCarousel(newIndex);
-        });
+    if (window.scrollY > 24) {
+        navbar.classList.add("navbar-scrolled");
+    } else {
+        navbar.classList.remove("navbar-scrolled");
     }
+});
 
-    if (nextBtn) {
-        nextBtn.addEventListener("click", () => {
-            const newIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
-            updateCarousel(newIndex);
-        });
+/* Barre de progression */
+const scrollProgress = document.getElementById("scrollProgress");
+
+const updateScrollProgress = () => {
+    if (!scrollProgress) return;
+
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+
+    scrollProgress.style.width = `${progress}%`;
+};
+
+window.addEventListener("scroll", updateScrollProgress);
+window.addEventListener("load", updateScrollProgress);
+
+/* Back to top */
+const backToTop = document.getElementById("backToTop");
+
+const toggleBackToTop = () => {
+    if (!backToTop) return;
+
+    if (window.scrollY > 450) {
+        backToTop.classList.add("visible");
+    } else {
+        backToTop.classList.remove("visible");
     }
+};
 
-    dots.forEach((dot) => {
-        dot.addEventListener("click", () => {
-            const index = Number(dot.dataset.index);
-            updateCarousel(index);
+window.addEventListener("scroll", toggleBackToTop);
+window.addEventListener("load", toggleBackToTop);
+
+if (backToTop) {
+    backToTop.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
         });
     });
+}
 
-    updateCarousel(0);
+/* Curseur glow */
+const cursorGlow = document.getElementById("cursorGlow");
+
+window.addEventListener("mousemove", (e) => {
+    if (!cursorGlow || window.innerWidth <= 760) return;
+
+    cursorGlow.style.opacity = "1";
+    cursorGlow.style.left = `${e.clientX}px`;
+    cursorGlow.style.top = `${e.clientY}px`;
+});
+
+window.addEventListener("mouseleave", () => {
+    if (!cursorGlow) return;
+    cursorGlow.style.opacity = "0";
+});
+
+/* Effet tilt sur les cartes */
+const cards = document.querySelectorAll(".tilt-card");
+
+cards.forEach((card) => {
+    card.addEventListener("mousemove", (e) => {
+        if (window.innerWidth <= 900) return;
+
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = ((y - centerY) / centerY) * -4;
+        const rotateY = ((x - centerX) / centerX) * 4;
+
+        card.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+    });
+
+    card.addEventListener("mouseleave", () => {
+        card.style.transform = "perspective(1200px) rotateX(0deg) rotateY(0deg) translateY(0)";
+    });
+});
+
+/* Compteurs */
+const counters = document.querySelectorAll(".counter");
+let countersStarted = false;
+
+const animateCounters = () => {
+    if (countersStarted) return;
+
+    const heroStats = document.querySelector(".hero-stats");
+    if (!heroStats) return;
+
+    const rect = heroStats.getBoundingClientRect();
+    if (rect.top > window.innerHeight - 120) return;
+
+    counters.forEach((counter) => {
+        const target = Number(counter.dataset.target || 0);
+        const duration = 1200;
+        const startTime = performance.now();
+
+        const updateCount = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const value = Math.round(target * eased);
+
+            counter.textContent = value;
+
+            if (progress < 1) {
+                requestAnimationFrame(updateCount);
+            } else {
+                counter.textContent = target;
+            }
+        };
+
+        requestAnimationFrame(updateCount);
+    });
+
+    countersStarted = true;
+};
+
+window.addEventListener("scroll", animateCounters);
+window.addEventListener("load", animateCounters);
+
+/* Navigation active selon section */
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-links a");
+
+const updateActiveNav = () => {
+    let current = "";
+
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 140;
+        const sectionHeight = section.offsetHeight;
+
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach((link) => {
+        link.classList.remove("active");
+        const href = link.getAttribute("href");
+
+        if (href === `#${current}`) {
+            link.classList.add("active");
+        }
+    });
+};
+
+window.addEventListener("scroll", updateActiveNav);
+window.addEventListener("load", updateActiveNav);
+
+/* Filtres projets */
+const filterButtons = document.querySelectorAll("[data-filter]");
+const projectCards = document.querySelectorAll(".project-card[data-category]");
+
+filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+
+        filterButtons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        projectCards.forEach((card) => {
+            const category = card.dataset.category;
+
+            if (filter === "all" || category === filter) {
+                card.classList.remove("is-hidden");
+            } else {
+                card.classList.add("is-hidden");
+            }
+        });
+
+        revealOnScroll();
+    });
+});
+
+/* Modales projets */
+let activeModal = null;
+
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+
+    modal.classList.add("active");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+    activeModal = modal;
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+
+    modal.classList.remove("active");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+
+    if (activeModal === modal) {
+        activeModal = null;
+    }
+}
+
+document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && activeModal) {
+        activeModal.classList.remove("active");
+        activeModal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("modal-open");
+        activeModal = null;
+    }
 });
