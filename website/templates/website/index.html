@@ -668,6 +668,97 @@
                     </div>
                 </article>
 
+
+                <article class="project-card premium-card reveal tilt-card" data-category="ops">
+                    <div class="project-visual project-visual-logistics">
+                        <div class="project-overlay"></div>
+                        <div class="project-visual-content">
+                            <span class="project-visual-label">Projet 07</span>
+                            <h4>Optimisation de tournées logistiques</h4>
+                            <p>Recherche opérationnelle • Optimisation • Transport</p>
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-topline">
+                            <span class="project-pill">Optimisation</span>
+                            <span class="project-pill muted-pill">Logistique</span>
+                        </div>
+
+                        <h3 class="project-title">Optimisation de tournées logistiques</h3>
+
+                        <p class="project-description">
+                            Projet d’optimisation visant à planifier efficacement les tournées de livraison en tenant compte des distances,
+                            des contraintes de temps, des capacités et de l’organisation des ressources.
+                        </p>
+
+                        <ul class="project-points">
+                            <li>Modélisation d’un problème de tournées de véhicules</li>
+                            <li>Réduction des distances et amélioration de l’efficacité opérationnelle</li>
+                            <li>Approche orientée aide à la décision et optimisation logistique</li>
+                        </ul>
+
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Optimisation</span>
+                            <span class="tech-badge">Logistique</span>
+                            <span class="tech-badge">Recherche opérationnelle</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <button class="project-btn project-btn-primary" type="button" onclick="openModal('logisticsModal')">
+                                <i class="fa-solid fa-file-lines"></i>
+                                Description
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card premium-card reveal reveal-delay-1 tilt-card" data-category="data">
+                    <div class="project-visual project-visual-pharma">
+                        <div class="project-overlay"></div>
+                        <div class="project-visual-content">
+                            <span class="project-visual-label">Projet 08</span>
+                            <h4>Gestion des produits pharmaceutiques</h4>
+                            <p>Gestion de stock • Analyse • Suivi des produits</p>
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-topline">
+                            <span class="project-pill">Data Management</span>
+                            <span class="project-pill muted-pill">Pharmaceutique</span>
+                        </div>
+
+                        <h3 class="project-title">Gestion des produits pharmaceutiques</h3>
+
+                        <p class="project-description">
+                            Application de gestion permettant de suivre les produits pharmaceutiques, les stocks, les entrées, les sorties,
+                            les dates d’expiration et les indicateurs clés liés à l’approvisionnement.
+                        </p>
+
+                        <ul class="project-points">
+                            <li>Suivi structuré des stocks et mouvements de produits</li>
+                            <li>Gestion des dates d’expiration et alertes potentielles</li>
+                            <li>Vision claire pour améliorer le pilotage des approvisionnements</li>
+                        </ul>
+
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Django</span>
+                            <span class="tech-badge">Base de données</span>
+                            <span class="tech-badge">Gestion de stock</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <button class="project-btn project-btn-primary" type="button" onclick="openModal('pharmaModal')">
+                                <i class="fa-solid fa-file-lines"></i>
+                                Description
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
             </div>
         </div>
     </section>
@@ -878,6 +969,55 @@
                 </p>
                 <p class="project-modal-text">
                     Ce projet démontre la capacité à concevoir une application full-stack intégrant de l’intelligence artificielle avancée, avec une attention particulière portée à la performance, à la pertinence des réponses et à l’expérience utilisateur.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="project-modal" id="logisticsModal" aria-hidden="true">
+        <div class="project-modal-backdrop" onclick="closeModal('logisticsModal')"></div>
+        <div class="project-modal-box">
+            <button class="project-modal-close" type="button" onclick="closeModal('logisticsModal')" aria-label="Fermer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="project-modal-content">
+                <span class="project-modal-kicker">Projet logistique • Optimisation</span>
+                <h3 class="project-modal-title">Optimisation de tournées logistiques</h3>
+                <p class="project-modal-text">
+                    Ce projet porte sur l’optimisation de tournées logistiques afin d’améliorer l’organisation des livraisons,
+                    réduire les distances parcourues et optimiser l’utilisation des ressources disponibles.
+                </p>
+                <p class="project-modal-text">
+                    Il s’appuie sur des principes de recherche opérationnelle, de modélisation de contraintes et d’aide à la décision
+                    pour proposer une planification plus efficace des trajets.
+                </p>
+                <p class="project-modal-text">
+                    Technologies utilisées : Python, optimisation, recherche opérationnelle, modélisation de contraintes.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-modal" id="pharmaModal" aria-hidden="true">
+        <div class="project-modal-backdrop" onclick="closeModal('pharmaModal')"></div>
+        <div class="project-modal-box">
+            <button class="project-modal-close" type="button" onclick="closeModal('pharmaModal')" aria-label="Fermer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="project-modal-content">
+                <span class="project-modal-kicker">Projet pharmacie • Gestion de stock</span>
+                <h3 class="project-modal-title">Gestion des produits pharmaceutiques</h3>
+                <p class="project-modal-text">
+                    Ce projet consiste à développer une solution de gestion des produits pharmaceutiques permettant de suivre les stocks,
+                    les mouvements d’entrée et de sortie, ainsi que les dates d’expiration des produits.
+                </p>
+                <p class="project-modal-text">
+                    L’objectif est de faciliter le pilotage des approvisionnements, limiter les ruptures de stock et améliorer la traçabilité
+                    des produits dans un contexte sensible comme le domaine pharmaceutique.
+                </p>
+                <p class="project-modal-text">
+                    Technologies utilisées : Python, Django, base de données, gestion de stock, analyse de données.
                 </p>
             </div>
         </div>
