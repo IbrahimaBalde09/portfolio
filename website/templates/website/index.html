@@ -359,56 +359,63 @@
 
             <div class="projects-list">
 
-                <article class="project-card premium-card reveal tilt-card project-card-gallery" data-category="ops">
-                    <div class="planning-gallery">
-                        <img src="{% static 'website/images/planning-1.png' %}" alt="Capture planning 1">
-                        <img src="{% static 'website/images/planning-2.png' %}" alt="Capture planning 2">
-                        <img src="{% static 'website/images/planning-3.png' %}" alt="Capture planning 3">
-                        <img src="{% static 'website/images/planning-4.png' %}" alt="Capture planning 4">
-                        <img src="{% static 'website/images/planning-5.png' %}" alt="Capture planning 5">
-                        <img src="{% static 'website/images/planning-6.png' %}" alt="Capture planning 6">
-                    </div>
+               <article class="project-card premium-card reveal tilt-card project-card-gallery" data-category="ops">
+    <div class="planning-gallery">
+        <img src="{% static 'website/images/planning-1.png' %}" alt="Capture planning 1">
+        <img src="{% static 'website/images/planning-2.png' %}" alt="Capture planning 2">
+        <img src="{% static 'website/images/planning-3.png' %}" alt="Capture planning 3">
+        <img src="{% static 'website/images/planning-4.png' %}" alt="Capture planning 4">
+        <img src="{% static 'website/images/planning-5.png' %}" alt="Capture planning 5">
+        <img src="{% static 'website/images/planning-6.png' %}" alt="Capture planning 6">
+    </div>
 
-                    <div class="project-content">
-                        <div class="project-topline">
-                            <span class="project-pill">Planification</span>
-                            <span class="project-pill muted-pill">Aide à la décision</span>
-                            <span class="project-pill project-pill-warning">🚧 En cours</span>
-                        </div>
+    <div class="project-content">
+        <div class="project-topline">
+            <span class="project-pill">Planification</span>
+            <span class="project-pill muted-pill">Aide à la décision</span>
+            <span class="project-pill project-pill-warning">🚧 En cours</span>
+        </div>
 
-                        <h3 class="project-title">Planning des gardes de médecins</h3>
+        <h3 class="project-title">Planning des gardes de médecins</h3>
 
-                        <p class="project-description">
-                            Application d’aide à la planification des gardes aux urgences intégrant les contraintes d’organisation,
-                            de disponibilité et d’équilibre de répartition.
-                        </p>
+        <p class="project-description">
+            Application d’aide à la planification des gardes aux urgences intégrant la gestion des indisponibilités
+            des médecins, un workflow de validation par le chef de service et un module d’intelligence artificielle
+            capable de prédire des créneaux pour les mois à venir.
+        </p>
 
-                        <ul class="project-points">
-                            <li>Gestion de contraintes réelles et arbitrages organisationnels</li>
-                            <li>Structuration d’un workflow clair de planification</li>
-                            <li>Approche concrète orientée optimisation et lisibilité</li>
-                        </ul>
+        <ul class="project-points">
+            <li>Déclaration d’indisponibilité : mission, formation, maladie ou autre motif</li>
+            <li>Notification au chef de service avec validation ou refus motivé</li>
+            <li>Prédiction de créneaux futurs à partir des plannings précédents avec Random Forest</li>
+        </ul>
 
-                        <div class="project-tech-stack">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">Optimisation</span>
-                            <span class="tech-badge">Scheduling</span>
-                            <span class="tech-badge">Décision</span>
-                        </div>
+        <div class="project-tech-stack">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Django</span>
+            <span class="tech-badge">Random Forest</span>
+            <span class="tech-badge">Machine Learning</span>
+            <span class="tech-badge">Scheduling</span>
+            <span class="tech-badge">Aide à la décision</span>
+        </div>
 
-                        <div class="project-actions">
-                            <button class="project-btn project-btn-primary" type="button" onclick="openModal('planningModal')">
-                                <i class="fa-solid fa-file-lines"></i>
-                                Description
-                            </button>
-                            <a href="https://github.com/IbrahimaBalde09?tab=repositories" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
-                                <i class="fa-brands fa-github"></i>
-                                Voir le projet GitHub
-                            </a>
-                        </div>
-                    </div>
-                </article>
+        <div class="project-actions">
+            <button class="project-btn project-btn-primary" type="button" onclick="openModal('planningModal')">
+                <i class="fa-solid fa-file-lines"></i>
+                Description
+            </button>
 
+            <a href="https://github.com/IbrahimaBalde09?tab=repositories"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="project-btn project-btn-secondary">
+
+                <i class="fa-brands fa-github"></i>
+                Voir le projet GitHub
+            </a>
+        </div>
+    </div>
+</article>
                 <article class="project-card premium-card reveal reveal-delay-1 tilt-card" data-category="data">
                     <div class="project-visual project-visual-credit">
                         <div class="project-overlay"></div>
@@ -832,16 +839,39 @@
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div class="project-modal-content">
-                <span class="project-modal-kicker">Projet médical • Aide à la décision</span>
+                <span class="project-modal-kicker">Projet médical • Planification • IA</span>
                 <h3 class="project-modal-title">Planning des gardes de médecins</h3>
+
                 <p class="project-modal-text">
-                    Planning des gardes de médecins est une application conçue pour répondre à une problématique réelle de planification dans le domaine médical.
+                    Planning des gardes de médecins est une application conçue pour répondre à une problématique réelle
+                    de planification dans le domaine médical, en facilitant l’organisation des gardes aux urgences.
                 </p>
+
                 <p class="project-modal-text">
-                    Son objectif est d’aider à organiser les gardes en tenant compte des disponibilités, des contraintes opérationnelles et de l’équilibre de répartition entre praticiens.
+                    L’application permet aux médecins de déclarer leurs indisponibilités selon plusieurs motifs :
+                    mission, formation, maladie ou autre raison. Une fois l’indisponibilité déclarée, le chef de service
+                    reçoit une notification afin d’examiner la demande.
                 </p>
+
                 <p class="project-modal-text">
-                    Ce projet illustre ma capacité à transformer un besoin métier concret en solution fonctionnelle, en combinant logique applicative, structuration des données, gestion de contraintes et visualisation claire de l’information.
+                    Le chef de service peut ensuite accepter ou refuser l’indisponibilité. En cas de refus, il peut préciser
+                    le motif du refus afin de garantir une meilleure traçabilité et une communication claire entre les acteurs.
+                </p>
+
+                <p class="project-modal-text">
+                    En complément de ce workflow de validation, le projet intègre un module d’intelligence artificielle basé
+                    sur un modèle Random Forest. Ce modèle exploite les créneaux issus des plannings précédents afin de prédire
+                    des créneaux pertinents pour les mois à venir.
+                </p>
+
+                <p class="project-modal-text">
+                    Ce projet illustre ma capacité à combiner gestion de contraintes, workflow métier, notifications,
+                    aide à la décision et machine learning dans une application concrète orientée usage.
+                </p>
+
+                <p class="project-modal-text">
+                    Technologies utilisées : Python, Django, Random Forest, Machine Learning, planification,
+                    gestion de contraintes, notifications et aide à la décision.
                 </p>
             </div>
         </div>
