@@ -1681,11 +1681,44 @@ body.modal-open {
         border-radius: 16px;
     }
 }
+
+.project-visual-biagents {
+    background:
+        radial-gradient(circle at 20% 18%, rgba(125, 211, 252, 0.22), transparent 26%),
+        radial-gradient(circle at 82% 25%, rgba(168, 85, 247, 0.20), transparent 30%),
+        linear-gradient(135deg, #071a35 0%, #123c7a 42%, #5b21b6 100%);
+    min-height: 320px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-visual-biagents::before {
+    content: "🤖";
+    position: absolute;
+    font-size: 120px;
+    right: 20px;
+    bottom: 8px;
+    opacity: 0.16;
+    z-index: 1;
+}
+
+.project-visual-biagents::after {
+    content: "BI";
+    position: absolute;
+    left: 20px;
+    top: 18px;
+    font-size: 78px;
+    font-weight: 800;
+    opacity: 0.10;
+    color: white;
+    z-index: 1;
+}
+
 .project-visual-planning-ai {
     background:
-        radial-gradient(circle at 20% 18%, rgba(125, 211, 252, 0.28), transparent 26%),
-        radial-gradient(circle at 78% 28%, rgba(59, 130, 246, 0.24), transparent 30%),
-        linear-gradient(135deg, #07162f 0%, #0f2f5f 42%, #2563eb 100%);
+        radial-gradient(circle at 22% 18%, rgba(66, 187, 255, 0.26), transparent 26%),
+        radial-gradient(circle at 78% 24%, rgba(34, 197, 94, 0.18), transparent 30%),
+        linear-gradient(135deg, #061529 0%, #0f3b68 42%, #2563eb 100%);
     min-height: 320px;
     position: relative;
     overflow: hidden;
@@ -1695,8 +1728,8 @@ body.modal-open {
     content: "🧠";
     position: absolute;
     font-size: 118px;
-    right: 22px;
-    bottom: 10px;
+    right: 18px;
+    bottom: 8px;
     opacity: 0.16;
     z-index: 1;
 }
@@ -1706,46 +1739,10 @@ body.modal-open {
     position: absolute;
     left: 22px;
     top: 18px;
-    font-size: 76px;
+    font-size: 78px;
     font-weight: 800;
-    opacity: 0.09;
+    opacity: 0.10;
     color: white;
     z-index: 1;
 }
 
-.project-visual-planning-ai .project-visual-content,
-.project-visual-biagents .project-visual-content {
-    z-index: 3;
-}
-
-.project-visual-biagents{
-    background:
-        linear-gradient(
-            135deg,
-            rgba(0,102,255,.9),
-            rgba(96,52,255,.9)
-        );
-    min-height: 320px;
-    position: relative;
-    overflow: hidden;
-}
-
-.project-visual-biagents::before{
-    content:"🤖";
-    position:absolute;
-    font-size:120px;
-    right:20px;
-    bottom:10px;
-    opacity:.15;
-}
-
-.project-visual-biagents::after{
-    content:"BI";
-    position:absolute;
-    left:20px;
-    top:20px;
-    font-size:70px;
-    font-weight:800;
-    opacity:.08;
-    color:white;
-}
