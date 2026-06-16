@@ -1681,3 +1681,34 @@ body.modal-open {
         border-radius: 16px;
     }
 }
+.project-visual-biagents{
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,102,255,.9),
+            rgba(96,52,255,.9)
+        );
+    min-height: 320px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-visual-biagents::before{
+    content:"🤖";
+    position:absolute;
+    font-size:120px;
+    right:20px;
+    bottom:10px;
+    opacity:.15;
+}
+
+.project-visual-biagents::after{
+    content:"BI";
+    position:absolute;
+    left:20px;
+    top:20px;
+    font-size:70px;
+    font-weight:800;
+    opacity:.08;
+    color:white;
+}
