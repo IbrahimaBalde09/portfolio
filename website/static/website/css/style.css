@@ -1681,6 +1681,43 @@ body.modal-open {
         border-radius: 16px;
     }
 }
+.project-visual-planning-ai {
+    background:
+        radial-gradient(circle at 20% 18%, rgba(125, 211, 252, 0.28), transparent 26%),
+        radial-gradient(circle at 78% 28%, rgba(59, 130, 246, 0.24), transparent 30%),
+        linear-gradient(135deg, #07162f 0%, #0f2f5f 42%, #2563eb 100%);
+    min-height: 320px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-visual-planning-ai::before {
+    content: "🧠";
+    position: absolute;
+    font-size: 118px;
+    right: 22px;
+    bottom: 10px;
+    opacity: 0.16;
+    z-index: 1;
+}
+
+.project-visual-planning-ai::after {
+    content: "IA";
+    position: absolute;
+    left: 22px;
+    top: 18px;
+    font-size: 76px;
+    font-weight: 800;
+    opacity: 0.09;
+    color: white;
+    z-index: 1;
+}
+
+.project-visual-planning-ai .project-visual-content,
+.project-visual-biagents .project-visual-content {
+    z-index: 3;
+}
+
 .project-visual-biagents{
     background:
         linear-gradient(

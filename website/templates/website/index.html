@@ -359,125 +359,68 @@
 
             <div class="projects-list">
 
-
-                <article class="project-card premium-card reveal tilt-card" data-category="ai">
-                    <div class="project-visual project-visual-biagents">
+               <article class="project-card premium-card reveal tilt-card" data-category="ops">
+                    <div class="project-visual project-visual-planning-ai">
                         <div class="project-overlay"></div>
                         <div class="project-visual-content">
-                            <span class="project-visual-label">Projet 01</span>
-                            <h4>Plateforme Multi-Agents de Business Intelligence</h4>
-                            <p>IA • Business Intelligence • PostgreSQL • MCP</p>
+                            <span class="project-visual-label">Projet 02</span>
+                            <h4>Plateforme intelligente de planification médicale</h4>
+                            <p>Optimisation • IA • Random Forest • Aide à la décision</p>
                         </div>
                     </div>
 
                     <div class="project-content">
                         <div class="project-topline">
-                            <span class="project-pill">IA Multi-Agents</span>
-                            <span class="project-pill muted-pill">Business Intelligence</span>
+                            <span class="project-pill">Planification médicale</span>
+                            <span class="project-pill muted-pill">IA décisionnelle</span>
+                            <span class="project-pill muted-pill">Projet terminé</span>
                         </div>
 
-                        <h3 class="project-title">Plateforme Multi-Agents de Business Intelligence</h3>
+                        <h3 class="project-title">Plateforme intelligente de planification médicale</h3>
 
                         <p class="project-description">
-                            Développement d’une plateforme Multi-Agents de Business Intelligence permettant l’analyse automatisée
-                            de données commerciales, l’exécution de requêtes SQL intelligentes, le calcul de KPI et la génération
-                            de rapports décisionnels enrichis par l’IA.
+                            Système d’aide à la décision pour la planification des gardes médicales aux urgences, combinant
+                            génération automatique sous contraintes, gestion des indisponibilités, remplacement intelligent
+                            des médecins absents et recommandations IA basées sur Random Forest.
                         </p>
 
                         <ul class="project-points">
-                            <li>Architecture Multi-Agents basée sur MCP</li>
-                            <li>Analyse automatisée de données commerciales</li>
-                            <li>Calcul intelligent de KPI et reporting décisionnel</li>
-                            <li>Génération de requêtes SQL par IA</li>
+                            <li>Génération automatique des plannings en respectant disponibilité, repos, spécialité et charge</li>
+                            <li>Remplacement intelligent en cas d’absence avec scoring multicritères et validation humaine</li>
+                            <li>Recommandation des créneaux futurs à partir de l’historique grâce à Random Forest</li>
+                            <li>Notifications, traçabilité des décisions, exports CSV/PDF et rapports de supervision</li>
                         </ul>
 
                         <div class="project-tech-stack">
                             <span class="tech-badge">Python</span>
-                            <span class="tech-badge">Flask</span>
-                            <span class="tech-badge">PostgreSQL</span>
-                            <span class="tech-badge">MCP</span>
-                            <span class="tech-badge">SQL</span>
-                            <span class="tech-badge">Business Intelligence</span>
-                            <span class="tech-badge">IA Multi-Agents</span>
+                            <span class="tech-badge">Django</span>
+                            <span class="tech-badge">Random Forest</span>
+                            <span class="tech-badge">Machine Learning</span>
+                            <span class="tech-badge">Optimisation</span>
+                            <span class="tech-badge">Aide à la décision</span>
                         </div>
 
                         <div class="project-actions">
-                            <button class="project-btn project-btn-primary" type="button" onclick="openModal('biAgentsModal')">
+                            <button class="project-btn project-btn-primary" type="button" onclick="openModal('planningModal')">
                                 <i class="fa-solid fa-file-lines"></i>
                                 Description
                             </button>
 
-                            <a href="https://github.com/IbrahimaBalde09?tab=repositories" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
+                            <a href="https://github.com/IbrahimaBalde09?tab=repositories"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="project-btn project-btn-secondary">
                                 <i class="fa-brands fa-github"></i>
                                 Voir le projet GitHub
                             </a>
                         </div>
                     </div>
                 </article>
-
-
-               <article class="project-card premium-card reveal tilt-card project-card-gallery" data-category="ops">
-    <div class="planning-gallery">
-        <img src="{% static 'website/images/planning-1.png' %}" alt="Capture planning 1">
-        <img src="{% static 'website/images/planning-2.png' %}" alt="Capture planning 2">
-        <img src="{% static 'website/images/planning-3.png' %}" alt="Capture planning 3">
-        <img src="{% static 'website/images/planning-4.png' %}" alt="Capture planning 4">
-        <img src="{% static 'website/images/planning-5.png' %}" alt="Capture planning 5">
-        <img src="{% static 'website/images/planning-6.png' %}" alt="Capture planning 6">
-    </div>
-
-    <div class="project-content">
-        <div class="project-topline">
-            <span class="project-pill">Planification</span>
-            <span class="project-pill muted-pill">Aide à la décision</span>
-            <span class="project-pill project-pill-warning">🚧 En cours</span>
-        </div>
-
-        <h3 class="project-title">Planning des gardes de médecins</h3>
-
-        <p class="project-description">
-            Application d’aide à la planification des gardes aux urgences intégrant la gestion des indisponibilités
-            des médecins, un workflow de validation par le chef de service et un module d’intelligence artificielle
-            capable de prédire des créneaux pour les mois à venir.
-        </p>
-
-        <ul class="project-points">
-            <li>Déclaration d’indisponibilité : mission, formation, maladie ou autre motif</li>
-            <li>Notification au chef de service avec validation ou refus motivé</li>
-            <li>Prédiction de créneaux futurs à partir des plannings précédents avec Random Forest</li>
-        </ul>
-
-        <div class="project-tech-stack">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">Django</span>
-            <span class="tech-badge">Random Forest</span>
-            <span class="tech-badge">Machine Learning</span>
-            <span class="tech-badge">Scheduling</span>
-            <span class="tech-badge">Aide à la décision</span>
-        </div>
-
-        <div class="project-actions">
-            <button class="project-btn project-btn-primary" type="button" onclick="openModal('planningModal')">
-                <i class="fa-solid fa-file-lines"></i>
-                Description
-            </button>
-
-            <a href="https://github.com/IbrahimaBalde09?tab=repositories"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="project-btn project-btn-secondary">
-
-                <i class="fa-brands fa-github"></i>
-                Voir le projet GitHub
-            </a>
-        </div>
-    </div>
-</article>
                 <article class="project-card premium-card reveal reveal-delay-1 tilt-card" data-category="data">
                     <div class="project-visual project-visual-credit">
                         <div class="project-overlay"></div>
                         <div class="project-visual-content">
-                            <span class="project-visual-label">Projet 02</span>
+                            <span class="project-visual-label">Projet 03</span>
                             <h4>Scoring & analyse du risque</h4>
                             <p>Machine Learning • Interprétation • Décision</p>
                         </div>
@@ -530,7 +473,7 @@
                     <div class="project-visual project-visual-stats">
                         <div class="project-overlay"></div>
                         <div class="project-visual-content">
-                            <span class="project-visual-label">Projet 03</span>
+                            <span class="project-visual-label">Projet 04</span>
                             <h4>Prédiction & modélisation</h4>
                             <p>Statistiques • Clustering • Performance</p>
                         </div>
@@ -578,7 +521,7 @@
                     <div class="project-visual project-visual-spam">
                         <div class="project-overlay"></div>
                         <div class="project-visual-content">
-                            <span class="project-visual-label">Projet 04</span>
+                            <span class="project-visual-label">Projet 05</span>
                             <h4>Détection de mails malveillants</h4>
                             <p>NLP • Classification • Machine Learning</p>
                         </div>
@@ -631,7 +574,7 @@
                     <div class="project-visual project-visual-assurbot">
                         <div class="project-overlay"></div>
                         <div class="project-visual-content">
-                            <span class="project-visual-label">Projet 05</span>
+                            <span class="project-visual-label">Projet 06</span>
                             <h4>Chatbot assurance intelligent</h4>
                             <p>Django • RAG • OpenAI • FAISS</p>
                         </div>
@@ -687,7 +630,7 @@
                     <div class="project-visual project-visual-dashboard">
                         <div class="project-overlay"></div>
                         <div class="project-visual-content">
-                            <span class="project-visual-label">Projet 06</span>
+                            <span class="project-visual-label">Projet 07</span>
                             <h4>Dashboard Power BI</h4>
                             <p>Business Intelligence • KPI • Visualisation</p>
                         </div>
@@ -737,7 +680,7 @@
                     <div class="project-visual project-visual-logistics">
                         <div class="project-overlay"></div>
                         <div class="project-visual-content">
-                            <span class="project-visual-label">Projet 07</span>
+                            <span class="project-visual-label">Projet 08</span>
                             <h4>Optimisation de tournées logistiques</h4>
                             <p>Recherche opérationnelle • Optimisation • Transport</p>
                         </div>
@@ -782,7 +725,7 @@
                     <div class="project-visual project-visual-pharma">
                         <div class="project-overlay"></div>
                         <div class="project-visual-content">
-                            <span class="project-visual-label">Projet 08</span>
+                            <span class="project-visual-label">Projet 09</span>
                             <h4>Gestion des produits pharmaceutiques</h4>
                             <p>Gestion de stock • Analyse • Suivi des produits</p>
                         </div>
@@ -896,44 +839,48 @@
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div class="project-modal-content">
-                <span class="project-modal-kicker">Projet médical • Planification • IA</span>
-                <h3 class="project-modal-title">Planning des gardes de médecins</h3>
+                <span class="project-modal-kicker">Projet médical • Optimisation • IA</span>
+                <h3 class="project-modal-title">Plateforme intelligente de planification médicale</h3>
 
                 <p class="project-modal-text">
-                    Planning des gardes de médecins est une application conçue pour répondre à une problématique réelle
-                    de planification dans le domaine médical, en facilitant l’organisation des gardes aux urgences.
+                    Ce projet consiste à concevoir et développer un système d’aide au planning des gardes de médecins aux urgences.
+                    L’objectif est de produire des plannings fiables, équitables et exploitables, tout en tenant compte des contraintes
+                    métier propres au contexte hospitalier : disponibilité, spécialité, temps de repos, charge hebdomadaire,
+                    chevauchements, nuits consécutives et équilibre de répartition.
                 </p>
 
                 <p class="project-modal-text">
-                    L’application permet aux médecins de déclarer leurs indisponibilités selon plusieurs motifs :
-                    mission, formation, maladie ou autre raison. Une fois l’indisponibilité déclarée, le chef de service
-                    reçoit une notification afin d’examiner la demande.
+                    L’application permet aux médecins de déclarer une indisponibilité selon plusieurs motifs : mission, formation,
+                    maladie, congé ou autre. Lorsqu’une absence est déclarée, le système identifie automatiquement les gardes impactées
+                    et déclenche un moteur de remplacement intelligent.
                 </p>
 
                 <p class="project-modal-text">
-                    Le chef de service peut ensuite accepter ou refuser l’indisponibilité. En cas de refus, il peut préciser
-                    le motif du refus afin de garantir une meilleure traçabilité et une communication claire entre les acteurs.
+                    Le moteur de remplacement évalue les médecins disponibles à l’aide d’un scoring multicritères : compatibilité de
+                    spécialité, absence de chevauchement, respect du repos minimal, limite hebdomadaire, charge mensuelle, historique
+                    d’affectation, nuits et week-ends déjà réalisés. Les meilleurs candidats sont ensuite proposés au responsable,
+                    qui conserve la décision finale.
                 </p>
 
                 <p class="project-modal-text">
-                    En complément de ce workflow de validation, le projet intègre un module d’intelligence artificielle basé
-                    sur un modèle Random Forest. Ce modèle exploite les créneaux issus des plannings précédents afin de prédire
-                    des créneaux pertinents pour les mois à venir.
+                    Le projet intègre également une couche d’intelligence artificielle basée sur Random Forest. À partir de l’historique
+                    des affectations, le modèle recommande les médecins les plus pertinents pour les créneaux à venir et enrichit la
+                    génération automatique du planning par une aide à la décision explicable.
                 </p>
 
                 <p class="project-modal-text">
-                    Ce projet illustre ma capacité à combiner gestion de contraintes, workflow métier, notifications,
-                    aide à la décision et machine learning dans une application concrète orientée usage.
+                    La solution comprend aussi un tableau de bord de supervision, un système de notifications, un historique des actions,
+                    des exports CSV/PDF et des rapports permettant de suivre la couverture des postes, les affectations, les absences et
+                    les décisions prises par le système.
                 </p>
 
                 <p class="project-modal-text">
-                    Technologies utilisées : Python, Django, Random Forest, Machine Learning, planification,
-                    gestion de contraintes, notifications et aide à la décision.
+                    Technologies utilisées : Python, Django, Machine Learning, Random Forest, optimisation sous contraintes,
+                    scoring multicritères, base de données, notifications, exports CSV/PDF et aide à la décision.
                 </p>
             </div>
         </div>
     </div>
-
     <div class="project-modal" id="creditModal" aria-hidden="true">
         <div class="project-modal-backdrop" onclick="closeModal('creditModal')"></div>
         <div class="project-modal-box">
@@ -1105,44 +1052,6 @@
                 </p>
                 <p class="project-modal-text">
                     Technologies utilisées : Python, Django, base de données, gestion de stock, analyse de données.
-                </p>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="project-modal" id="biAgentsModal" aria-hidden="true">
-        <div class="project-modal-backdrop" onclick="closeModal('biAgentsModal')"></div>
-        <div class="project-modal-box">
-            <button class="project-modal-close" type="button" onclick="closeModal('biAgentsModal')" aria-label="Fermer">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <div class="project-modal-content">
-                <span class="project-modal-kicker">Intelligence Artificielle • Business Intelligence</span>
-                <h3 class="project-modal-title">Plateforme Multi-Agents de Business Intelligence</h3>
-
-                <p class="project-modal-text">
-                    Ce projet porte sur le développement d’une plateforme Multi-Agents de Business Intelligence conçue pour automatiser
-                    l’analyse de données commerciales et faciliter la prise de décision stratégique.
-                </p>
-
-                <p class="project-modal-text">
-                    La solution repose sur une architecture Multi-Agents basée sur MCP, où plusieurs agents spécialisés collaborent pour
-                    interroger les données, analyser les indicateurs de performance et produire des recommandations décisionnelles.
-                </p>
-
-                <p class="project-modal-text">
-                    La plateforme permet l’exécution de requêtes SQL intelligentes, le calcul automatique de KPI métier et la génération
-                    de rapports décisionnels enrichis par l’intelligence artificielle.
-                </p>
-
-                <p class="project-modal-text">
-                    Ce projet met en œuvre des concepts avancés d’IA générative, d’orchestration d’agents, de Business Intelligence
-                    et d’exploitation de bases de données PostgreSQL.
-                </p>
-
-                <p class="project-modal-text">
-                    Technologies utilisées : Python, Flask, PostgreSQL, MCP, SQL, IA Multi-Agents, Business Intelligence et Data Analytics.
                 </p>
             </div>
         </div>
