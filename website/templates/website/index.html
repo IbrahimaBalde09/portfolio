@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{% static 'website/css/style.css' %}?v=20260325-3">
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}?v=20260617-4">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
@@ -359,63 +359,123 @@
 
             <div class="projects-list">
 
-               <article class="project-card premium-card reveal tilt-card project-card-gallery" data-category="ops">
-    <div class="planning-gallery">
-        <img src="{% static 'website/images/planning-1.png' %}" alt="Capture planning 1">
-        <img src="{% static 'website/images/planning-2.png' %}" alt="Capture planning 2">
-        <img src="{% static 'website/images/planning-3.png' %}" alt="Capture planning 3">
-        <img src="{% static 'website/images/planning-4.png' %}" alt="Capture planning 4">
-        <img src="{% static 'website/images/planning-5.png' %}" alt="Capture planning 5">
-        <img src="{% static 'website/images/planning-6.png' %}" alt="Capture planning 6">
-    </div>
 
-    <div class="project-content">
-        <div class="project-topline">
-            <span class="project-pill">Planification</span>
-            <span class="project-pill muted-pill">Aide à la décision</span>
-            <span class="project-pill project-pill-warning">🚧 En cours</span>
-        </div>
+                <article class="project-card premium-card reveal tilt-card" data-category="ai">
+                    <div class="project-visual project-visual-biagents">
+                        <div class="project-overlay"></div>
+                        <div class="project-visual-content">
+                            <span class="project-visual-label">Projet 01</span>
+                            <h4>Plateforme Multi-Agents de Business Intelligence</h4>
+                            <p>IA • Business Intelligence • PostgreSQL • MCP</p>
+                        </div>
+                    </div>
 
-        <h3 class="project-title">Planning des gardes de médecins</h3>
+                    <div class="project-content">
+                        <div class="project-topline">
+                            <span class="project-pill">IA Multi-Agents</span>
+                            <span class="project-pill muted-pill">Business Intelligence</span>
+                        </div>
 
-        <p class="project-description">
-            Application d’aide à la planification des gardes aux urgences intégrant la gestion des indisponibilités
-            des médecins, un workflow de validation par le chef de service et un module d’intelligence artificielle
-            capable de prédire des créneaux pour les mois à venir.
-        </p>
+                        <h3 class="project-title">Plateforme Multi-Agents de Business Intelligence</h3>
 
-        <ul class="project-points">
-            <li>Déclaration d’indisponibilité : mission, formation, maladie ou autre motif</li>
-            <li>Notification au chef de service avec validation ou refus motivé</li>
-            <li>Prédiction de créneaux futurs à partir des plannings précédents avec Random Forest</li>
-        </ul>
+                        <p class="project-description">
+                            Développement d’une plateforme Multi-Agents de Business Intelligence permettant l’analyse automatisée
+                            de données commerciales, l’exécution de requêtes SQL intelligentes, le calcul de KPI et la génération
+                            de rapports décisionnels enrichis par l’IA.
+                        </p>
 
-        <div class="project-tech-stack">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">Django</span>
-            <span class="tech-badge">Random Forest</span>
-            <span class="tech-badge">Machine Learning</span>
-            <span class="tech-badge">Scheduling</span>
-            <span class="tech-badge">Aide à la décision</span>
-        </div>
+                        <ul class="project-points">
+                            <li>Architecture Multi-Agents basée sur MCP</li>
+                            <li>Analyse automatisée de données commerciales</li>
+                            <li>Calcul intelligent de KPI et reporting décisionnel</li>
+                            <li>Génération de requêtes SQL par IA</li>
+                        </ul>
 
-        <div class="project-actions">
-            <button class="project-btn project-btn-primary" type="button" onclick="openModal('planningModal')">
-                <i class="fa-solid fa-file-lines"></i>
-                Description
-            </button>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Flask</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                            <span class="tech-badge">MCP</span>
+                            <span class="tech-badge">SQL</span>
+                            <span class="tech-badge">Business Intelligence</span>
+                            <span class="tech-badge">IA Multi-Agents</span>
+                        </div>
 
-            <a href="https://github.com/IbrahimaBalde09?tab=repositories"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="project-btn project-btn-secondary">
+                        <div class="project-actions">
+                            <button class="project-btn project-btn-primary" type="button" onclick="openModal('biAgentsModal')">
+                                <i class="fa-solid fa-file-lines"></i>
+                                Description
+                            </button>
 
-                <i class="fa-brands fa-github"></i>
-                Voir le projet GitHub
-            </a>
-        </div>
-    </div>
-</article>
+                            <a href="https://github.com/IbrahimaBalde09?tab=repositories" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
+                                <i class="fa-brands fa-github"></i>
+                                Voir le projet GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="project-card premium-card reveal tilt-card" data-category="ops">
+                    <div class="project-visual project-visual-planning-ai">
+                        <div class="project-overlay"></div>
+                        <div class="project-visual-content">
+                            <span class="project-visual-label">Projet 02</span>
+                            <h4>Plateforme intelligente de planification médicale</h4>
+                            <p>Django • Random Forest • Optimisation • Aide à la décision</p>
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-topline">
+                            <span class="project-pill">IA décisionnelle</span>
+                            <span class="project-pill muted-pill">Planification médicale</span>
+                            <span class="project-pill muted-pill">Projet terminé</span>
+                        </div>
+
+                        <h3 class="project-title">Plateforme intelligente de planification médicale</h3>
+
+                        <p class="project-description">
+                            Application web d’aide à la décision pour la planification des gardes médicales aux urgences,
+                            combinant génération automatique de planning, optimisation sous contraintes, gestion des absences,
+                            remplacement intelligent et recommandations IA basées sur l’algorithme Random Forest.
+                        </p>
+
+                        <ul class="project-points">
+                            <li>Génération automatique des plannings médicaux sous contraintes métier</li>
+                            <li>Remplacement intelligent des médecins absents avec scoring multicritères</li>
+                            <li>Recommandation et prédiction des affectations futures via Random Forest</li>
+                            <li>Vérification automatique des temps de repos, disponibilités, charges et spécialités</li>
+                            <li>Traçabilité, notifications et validation humaine des décisions proposées par l’IA</li>
+                        </ul>
+
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Django</span>
+                            <span class="tech-badge">Random Forest</span>
+                            <span class="tech-badge">Machine Learning</span>
+                            <span class="tech-badge">Optimisation</span>
+                            <span class="tech-badge">Aide à la décision</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <button class="project-btn project-btn-primary" type="button" onclick="openModal('planningModal')">
+                                <i class="fa-solid fa-file-lines"></i>
+                                Description
+                            </button>
+
+                            <a href="https://github.com/IbrahimaBalde09?tab=repositories"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="project-btn project-btn-secondary">
+                                <i class="fa-brands fa-github"></i>
+                                Voir le projet GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+
                 <article class="project-card premium-card reveal reveal-delay-1 tilt-card" data-category="data">
                     <div class="project-visual project-visual-credit">
                         <div class="project-overlay"></div>
@@ -469,13 +529,13 @@
                     </div>
                 </article>
 
-                                <article class="project-card premium-card reveal reveal-delay-2 tilt-card" data-category="data">
+                <article class="project-card premium-card reveal reveal-delay-2 tilt-card" data-category="data">
                     <div class="project-visual project-visual-predictia">
                         <div class="project-overlay"></div>
                         <div class="project-visual-content">
                             <span class="project-visual-label">Projet 04</span>
                             <h4>PredictIA</h4>
-                            <p>Machine Learning • Ferroviaire • Prédiction des retards</p>
+                            <p>Prédiction des retards ferroviaires • Machine Learning • XGBoost</p>
                         </div>
                     </div>
 
@@ -483,22 +543,22 @@
                         <div class="project-topline">
                             <span class="project-pill">Machine Learning</span>
                             <span class="project-pill muted-pill">Transport ferroviaire</span>
+                            <span class="project-pill muted-pill">Prédiction</span>
                         </div>
 
-                        <h3 class="project-title">PredictIA — prédiction des retards ferroviaires</h3>
+                        <h3 class="project-title">PredictIA</h3>
 
                         <p class="project-description">
-                            Projet de machine learning visant à prédire les retards ferroviaires à partir de données historiques.
-                            La solution couvre l’exploration des données, le nettoyage, la création de variables, l’entraînement
-                            de modèles supervisés et l’évaluation des performances pour anticiper les situations à risque.
+                            Projet de machine learning dédié à la prédiction des retards ferroviaires à partir de données
+                            d’exploitation, de régularité, d’incidents, de météo, de fréquentation et d’historique temporel.
+                            L’objectif est d’anticiper le risque de retard et d’aider à mieux piloter la performance du réseau.
                         </p>
 
                         <ul class="project-points">
-                            <li>Analyse et préparation d’un dataset ferroviaire pour la prédiction des retards</li>
-                            <li>Feature engineering à partir des variables temporelles et opérationnelles</li>
-                            <li>Comparaison de modèles supervisés : Random Forest et XGBoost</li>
-                            <li>Évaluation par métriques de classification, matrice de confusion, ROC-AUC et validation croisée</li>
-                            <li>Sauvegarde du meilleur modèle pour réutilisation dans une application prédictive</li>
+                            <li>Analyse exploratoire d’un dataset ferroviaire de 1 440 observations et 43 variables</li>
+                            <li>Feature engineering temporel : mois, trimestre, variables cycliques, lags et moyennes mobiles</li>
+                            <li>Comparaison de modèles : régression logistique, arbre de décision, Random Forest et XGBoost</li>
+                            <li>Optimisation du modèle XGBoost avec GridSearchCV et évaluation par accuracy, précision, recall et F1-score</li>
                         </ul>
 
                         <div class="project-tech-stack">
@@ -507,7 +567,8 @@
                             <span class="tech-badge">Scikit-learn</span>
                             <span class="tech-badge">Random Forest</span>
                             <span class="tech-badge">XGBoost</span>
-                            <span class="tech-badge">Classification</span>
+                            <span class="tech-badge">Feature Engineering</span>
+                            <span class="tech-badge">Transport Analytics</span>
                         </div>
 
                         <div class="project-actions">
@@ -523,6 +584,7 @@
                         </div>
                     </div>
                 </article>
+
 
                 <article class="project-card premium-card reveal tilt-card" data-category="ai">
                     <div class="project-visual project-visual-spam">
@@ -729,7 +791,6 @@
                 </article>
 
 
-
             </div>
         </div>
     </section>
@@ -796,6 +857,46 @@
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
+
+
+    <div class="project-modal" id="biAgentsModal" aria-hidden="true">
+        <div class="project-modal-backdrop" onclick="closeModal('biAgentsModal')"></div>
+        <div class="project-modal-box">
+            <button class="project-modal-close" type="button" onclick="closeModal('biAgentsModal')" aria-label="Fermer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="project-modal-content">
+                <span class="project-modal-kicker">Intelligence Artificielle • Business Intelligence</span>
+                <h3 class="project-modal-title">Plateforme Multi-Agents de Business Intelligence</h3>
+
+                <p class="project-modal-text">
+                    Ce projet porte sur le développement d’une plateforme Multi-Agents de Business Intelligence conçue pour automatiser
+                    l’analyse de données commerciales et faciliter la prise de décision stratégique.
+                </p>
+
+                <p class="project-modal-text">
+                    La solution repose sur une architecture Multi-Agents basée sur MCP, où plusieurs agents spécialisés collaborent pour
+                    interroger les données, analyser les indicateurs de performance et produire des recommandations décisionnelles.
+                </p>
+
+                <p class="project-modal-text">
+                    La plateforme permet l’exécution de requêtes SQL intelligentes, le calcul automatique de KPI métier et la génération
+                    de rapports décisionnels enrichis par l’intelligence artificielle.
+                </p>
+
+                <p class="project-modal-text">
+                    Ce projet met en œuvre des concepts avancés d’IA générative, d’orchestration d’agents, de Business Intelligence
+                    et d’exploitation de bases de données PostgreSQL.
+                </p>
+
+                <p class="project-modal-text">
+                    Technologies utilisées : Python, Flask, PostgreSQL, MCP, SQL, IA Multi-Agents, Business Intelligence et Data Analytics.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
     <div class="project-modal" id="planningModal" aria-hidden="true">
         <div class="project-modal-backdrop" onclick="closeModal('planningModal')"></div>
         <div class="project-modal-box">
@@ -803,43 +904,108 @@
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div class="project-modal-content">
-                <span class="project-modal-kicker">Projet médical • Planification • IA</span>
-                <h3 class="project-modal-title">Planning des gardes de médecins</h3>
+                <span class="project-modal-kicker">Projet médical • IA • Optimisation</span>
+                <h3 class="project-modal-title">Plateforme intelligente de planification médicale</h3>
 
                 <p class="project-modal-text">
-                    Planning des gardes de médecins est une application conçue pour répondre à une problématique réelle
-                    de planification dans le domaine médical, en facilitant l’organisation des gardes aux urgences.
+                    Ce projet consiste à concevoir une plateforme d’aide à la décision pour la planification des gardes de médecins
+                    aux urgences. L’objectif est de produire un planning fiable, équitable et conforme aux contraintes métier,
+                    tout en permettant une replanification rapide lorsqu’un médecin devient indisponible.
                 </p>
 
                 <p class="project-modal-text">
-                    L’application permet aux médecins de déclarer leurs indisponibilités selon plusieurs motifs :
-                    mission, formation, maladie ou autre raison. Une fois l’indisponibilité déclarée, le chef de service
-                    reçoit une notification afin d’examiner la demande.
+                    Le système combine une application web Django, une base de données métier, un moteur de génération automatique,
+                    un moteur de remplacement intelligent et des modules d’intelligence artificielle destinés à recommander les
+                    affectations les plus pertinentes.
                 </p>
 
                 <p class="project-modal-text">
-                    Le chef de service peut ensuite accepter ou refuser l’indisponibilité. En cas de refus, il peut préciser
-                    le motif du refus afin de garantir une meilleure traçabilité et une communication claire entre les acteurs.
+                    Les médecins peuvent déclarer leurs indisponibilités selon plusieurs motifs : mission, formation, maladie ou autre.
+                    Lorsqu’une indisponibilité est déclarée, le système identifie automatiquement les gardes impactées, recherche les
+                    candidats compatibles et propose des remplaçants classés par score.
                 </p>
 
                 <p class="project-modal-text">
-                    En complément de ce workflow de validation, le projet intègre un module d’intelligence artificielle basé
-                    sur un modèle Random Forest. Ce modèle exploite les créneaux issus des plannings précédents afin de prédire
-                    des créneaux pertinents pour les mois à venir.
+                    Le moteur de remplacement vérifie plusieurs contraintes avant toute proposition : disponibilité du médecin,
+                    absence de chevauchement, temps de repos minimal, limite hebdomadaire, compatibilité de spécialité,
+                    charge mensuelle, nuits et week-ends déjà effectués.
                 </p>
 
                 <p class="project-modal-text">
-                    Ce projet illustre ma capacité à combiner gestion de contraintes, workflow métier, notifications,
-                    aide à la décision et machine learning dans une application concrète orientée usage.
+                    Le projet intègre également un module de recommandation basé sur l’algorithme Random Forest. À partir de l’historique
+                    des affectations, le modèle estime la pertinence d’un médecin pour un poste et un créneau donné, afin de recommander
+                    des affectations futures plus cohérentes et plus équilibrées.
                 </p>
 
                 <p class="project-modal-text">
-                    Technologies utilisées : Python, Django, Random Forest, Machine Learning, planification,
-                    gestion de contraintes, notifications et aide à la décision.
+                    La solution conserve une validation humaine : l’IA propose, le responsable décide. Les actions importantes sont
+                    historisées, les utilisateurs sont notifiés et les plannings peuvent être exportés en CSV ou PDF.
+                </p>
+
+                <p class="project-modal-text">
+                    Technologies utilisées : Python, Django, Random Forest, Machine Learning, optimisation sous contraintes,
+                    scoring multicritères, système de recommandation, notifications, traçabilité et aide à la décision.
                 </p>
             </div>
         </div>
     </div>
+
+
+    <div class="project-modal" id="predictiaModal" aria-hidden="true">
+        <div class="project-modal-backdrop" onclick="closeModal('predictiaModal')"></div>
+        <div class="project-modal-box">
+            <button class="project-modal-close" type="button" onclick="closeModal('predictiaModal')" aria-label="Fermer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="project-modal-content">
+                <span class="project-modal-kicker">Transport ferroviaire • Machine Learning</span>
+                <h3 class="project-modal-title">PredictIA</h3>
+
+                <p class="project-modal-text">
+                    PredictIA est un projet de machine learning conçu pour prédire les retards ferroviaires à partir de données
+                    d’exploitation du réseau. Le projet exploite des informations liées aux axes ferroviaires, au type de service,
+                    à la distance, au nombre de trains, au taux de régularité, aux incidents techniques, aux suppressions,
+                    à la météo, à l’affluence et à l’historique des retards.
+                </p>
+
+                <p class="project-modal-text">
+                    Le travail commence par une phase d’analyse exploratoire permettant de comprendre la structure du dataset,
+                    d’identifier les variables numériques et catégorielles, d’analyser la distribution des retards et d’étudier
+                    les relations entre les facteurs opérationnels et le risque de retard.
+                </p>
+
+                <p class="project-modal-text">
+                    Une étape importante du projet concerne le feature engineering. Des variables temporelles ont été créées
+                    afin de mieux représenter la saisonnalité et l’évolution du trafic : mois, année, trimestre, encodage cyclique,
+                    valeurs retardées, moyennes mobiles, écarts glissants et tendances récentes.
+                </p>
+
+                <p class="project-modal-text">
+                    Plusieurs modèles ont été entraînés et comparés, notamment la régression logistique, l’arbre de décision,
+                    Random Forest et XGBoost. Les performances ont été évaluées avec des métriques adaptées à la classification :
+                    accuracy, précision, recall et F1-score.
+                </p>
+
+                <p class="project-modal-text">
+                    Le modèle XGBoost a ensuite été optimisé avec GridSearchCV afin d’identifier les meilleurs hyperparamètres.
+                    Le projet inclut également la sauvegarde des modèles entraînés, du scaler et de la liste des variables utilisées,
+                    ce qui permet de réutiliser le modèle pour de futures prédictions.
+                </p>
+
+                <p class="project-modal-text">
+                    Ce projet illustre ma capacité à construire un pipeline complet de machine learning appliqué à un cas métier
+                    concret : préparation des données, analyse, feature engineering, entraînement, comparaison de modèles,
+                    optimisation, évaluation et sauvegarde des artefacts.
+                </p>
+
+                <p class="project-modal-text">
+                    Technologies utilisées : Python, Pandas, NumPy, Scikit-learn, Random Forest, XGBoost, GridSearchCV,
+                    Matplotlib, Seaborn, analyse exploratoire, feature engineering et classification.
+                </p>
+            </div>
+        </div>
+    </div>
+
 
     <div class="project-modal" id="creditModal" aria-hidden="true">
         <div class="project-modal-backdrop" onclick="closeModal('creditModal')"></div>
@@ -871,7 +1037,6 @@
             </div>
         </div>
     </div>
-
 
 
     <div class="project-modal" id="spamModal" aria-hidden="true">
@@ -968,55 +1133,6 @@
     </div>
 
 
-
-
-    <div class="project-modal" id="predictiaModal" aria-hidden="true">
-        <div class="project-modal-backdrop" onclick="closeModal('predictiaModal')"></div>
-        <div class="project-modal-box">
-            <button class="project-modal-close" type="button" onclick="closeModal('predictiaModal')" aria-label="Fermer">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <div class="project-modal-content">
-                <span class="project-modal-kicker">Projet transport • Machine Learning</span>
-                <h3 class="project-modal-title">PredictIA — prédiction des retards ferroviaires</h3>
-
-                <p class="project-modal-text">
-                    PredictIA est un projet de machine learning consacré à la prédiction des retards ferroviaires.
-                    L’objectif est d’exploiter des données historiques afin d’anticiper les situations susceptibles
-                    de provoquer un retard et de fournir une aide à la décision dans un contexte de transport.
-                </p>
-
-                <p class="project-modal-text">
-                    Le projet couvre l’ensemble du cycle data science : chargement du dataset, exploration initiale,
-                    analyse des variables, traitement des valeurs manquantes, préparation des données temporelles,
-                    création de la variable cible et construction de variables utiles pour les modèles.
-                </p>
-
-                <p class="project-modal-text">
-                    Plusieurs modèles supervisés sont entraînés et comparés, notamment Random Forest et XGBoost.
-                    Les performances sont évaluées à l’aide de métriques de classification, d’une matrice de confusion,
-                    de la courbe ROC-AUC, de la validation croisée et de l’analyse du surapprentissage.
-                </p>
-
-                <p class="project-modal-text">
-                    Une attention particulière est portée à l’interprétabilité du modèle grâce à l’analyse de l’importance
-                    des variables. Cette étape permet d’identifier les facteurs qui influencent le plus la prédiction
-                    d’un retard et de rendre le résultat plus exploitable.
-                </p>
-
-                <p class="project-modal-text">
-                    Le meilleur modèle est sauvegardé avec ses fichiers associés afin d’être réutilisé dans une application
-                    prédictive ou dans un pipeline de prédiction batch.
-                </p>
-
-                <p class="project-modal-text">
-                    Technologies utilisées : Python, Pandas, Scikit-learn, Random Forest, XGBoost, classification,
-                    validation croisée, ROC-AUC, matrice de confusion et sauvegarde de modèles.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <script src="{% static 'website/js/script.js' %}?v=20260325-3"></script>
+    <script src="{% static 'website/js/script.js' %}?v=20260617-4"></script>
 </body>
 </html>
