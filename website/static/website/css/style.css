@@ -1681,51 +1681,50 @@ body.modal-open {
         border-radius: 16px;
     }
 }
-
-.project-visual-biagents {
+.project-visual-biagents{
     background:
-        radial-gradient(circle at 20% 18%, rgba(125, 211, 252, 0.22), transparent 26%),
-        radial-gradient(circle at 82% 25%, rgba(168, 85, 247, 0.20), transparent 30%),
-        linear-gradient(135deg, #071a35 0%, #123c7a 42%, #5b21b6 100%);
+        linear-gradient(
+            135deg,
+            rgba(0,102,255,.9),
+            rgba(96,52,255,.9)
+        );
     min-height: 320px;
     position: relative;
     overflow: hidden;
 }
 
-.project-visual-biagents::before {
-    content: "🤖";
-    position: absolute;
-    font-size: 120px;
-    right: 20px;
-    bottom: 8px;
-    opacity: 0.16;
-    z-index: 1;
+.project-visual-biagents::before{
+    content:"🤖";
+    position:absolute;
+    font-size:120px;
+    right:20px;
+    bottom:10px;
+    opacity:.15;
 }
 
-.project-visual-biagents::after {
-    content: "BI";
-    position: absolute;
-    left: 20px;
-    top: 18px;
-    font-size: 78px;
-    font-weight: 800;
-    opacity: 0.10;
-    color: white;
-    z-index: 1;
+.project-visual-biagents::after{
+    content:"BI";
+    position:absolute;
+    left:20px;
+    top:20px;
+    font-size:70px;
+    font-weight:800;
+    opacity:.08;
+    color:white;
 }
 
-.project-visual-planning-ai {
+.project-visual-predictia {
     background:
-        radial-gradient(circle at 22% 18%, rgba(66, 187, 255, 0.26), transparent 26%),
-        radial-gradient(circle at 78% 24%, rgba(34, 197, 94, 0.18), transparent 30%),
-        linear-gradient(135deg, #061529 0%, #0f3b68 42%, #2563eb 100%);
+        radial-gradient(circle at 22% 18%, rgba(56, 189, 248, 0.24), transparent 26%),
+        radial-gradient(circle at 82% 24%, rgba(34, 197, 94, 0.20), transparent 30%),
+        linear-gradient(135deg, #071824 0%, #0f4c81 42%, #16a34a 100%);
     min-height: 320px;
     position: relative;
     overflow: hidden;
 }
 
-.project-visual-planning-ai::before {
-    content: "🧠";
+.project-visual-predictia::before {
+    content: "🚆";
     position: absolute;
     font-size: 118px;
     right: 18px;
@@ -1734,8 +1733,8 @@ body.modal-open {
     z-index: 1;
 }
 
-.project-visual-planning-ai::after {
-    content: "IA";
+.project-visual-predictia::after {
+    content: "AI";
     position: absolute;
     left: 22px;
     top: 18px;
