@@ -1712,3 +1712,9 @@ body.modal-open {
     opacity:.08;
     color:white;
 }
+.project-visual-logistics {
+    background:
+        radial-gradient(circle at 22% 18%, rgba(56, 189, 248, 0.24), transparent 28%),
+        radial-gradient(circle at 82% 26%, rgba(250, 204, 21, 0.20), transparent 30%),
+        linear-gradient(135deg, #071525 0%, #123c7a 42%, #f59e0b 100%);
+}
