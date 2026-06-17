@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{% static 'website/css/style.css' %}?v=20260325-2">
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}?v=20260325-3">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
@@ -122,7 +122,7 @@
                 <div class="hero-photo-wrap reveal">
                     <div class="hero-photo-shell">
                         <div class="hero-photo-frame">
-                            <img src="{% static 'website/images/profile.PNG' %}" alt="Photo de Ibrahima Baldé">
+                            <img src="{% static 'website/images/profile.png' %}" alt="Photo de Ibrahima Baldé">
                         </div>
                     </div>
                 </div>
@@ -468,13 +468,14 @@
                         </div>
                     </div>
                 </article>
-                <article class="project-card premium-card reveal reveal-delay-2 tilt-card" data-category="data">
+
+                                <article class="project-card premium-card reveal reveal-delay-2 tilt-card" data-category="data">
                     <div class="project-visual project-visual-predictia">
                         <div class="project-overlay"></div>
                         <div class="project-visual-content">
                             <span class="project-visual-label">Projet 04</span>
                             <h4>PredictIA</h4>
-                            <p>Prédiction des retards ferroviaires • Machine Learning • XGBoost</p>
+                            <p>Machine Learning • Ferroviaire • Prédiction des retards</p>
                         </div>
                     </div>
 
@@ -482,23 +483,22 @@
                         <div class="project-topline">
                             <span class="project-pill">Machine Learning</span>
                             <span class="project-pill muted-pill">Transport ferroviaire</span>
-                            <span class="project-pill muted-pill">Prédiction</span>
                         </div>
 
-                        <h3 class="project-title">PredictIA</h3>
+                        <h3 class="project-title">PredictIA — prédiction des retards ferroviaires</h3>
 
                         <p class="project-description">
-                            Projet de machine learning dédié à la prédiction des retards ferroviaires à partir de données d’exploitation,
-                            de régularité, d’incidents, de météo, d’affluence et d’historique temporel. L’objectif est d’anticiper les
-                            risques de retard afin d’améliorer le pilotage opérationnel et l’aide à la décision dans le transport.
+                            Projet de machine learning visant à prédire les retards ferroviaires à partir de données historiques.
+                            La solution couvre l’exploration des données, le nettoyage, la création de variables, l’entraînement
+                            de modèles supervisés et l’évaluation des performances pour anticiper les situations à risque.
                         </p>
 
                         <ul class="project-points">
-                            <li>Analyse et préparation d’un dataset ferroviaire de 1 440 observations et 43 variables</li>
-                            <li>Feature engineering temporel : mois, saisonnalité, lags, tendances et moyennes glissantes</li>
-                            <li>Comparaison de modèles : régression logistique, arbre de décision, Random Forest et XGBoost</li>
-                            <li>Optimisation du modèle XGBoost avec GridSearchCV et validation croisée</li>
-                            <li>Évaluation par accuracy, précision, recall, F1-score, matrice de confusion et courbe ROC-AUC</li>
+                            <li>Analyse et préparation d’un dataset ferroviaire pour la prédiction des retards</li>
+                            <li>Feature engineering à partir des variables temporelles et opérationnelles</li>
+                            <li>Comparaison de modèles supervisés : Random Forest et XGBoost</li>
+                            <li>Évaluation par métriques de classification, matrice de confusion, ROC-AUC et validation croisée</li>
+                            <li>Sauvegarde du meilleur modèle pour réutilisation dans une application prédictive</li>
                         </ul>
 
                         <div class="project-tech-stack">
@@ -507,8 +507,7 @@
                             <span class="tech-badge">Scikit-learn</span>
                             <span class="tech-badge">Random Forest</span>
                             <span class="tech-badge">XGBoost</span>
-                            <span class="tech-badge">GridSearchCV</span>
-                            <span class="tech-badge">Data Science</span>
+                            <span class="tech-badge">Classification</span>
                         </div>
 
                         <div class="project-actions">
@@ -524,9 +523,6 @@
                         </div>
                     </div>
                 </article>
-
-
-
 
                 <article class="project-card premium-card reveal tilt-card" data-category="ai">
                     <div class="project-visual project-visual-spam">
@@ -876,6 +872,8 @@
         </div>
     </div>
 
+
+
     <div class="project-modal" id="spamModal" aria-hidden="true">
         <div class="project-modal-backdrop" onclick="closeModal('spamModal')"></div>
         <div class="project-modal-box">
@@ -969,9 +967,9 @@
         </div>
     </div>
 
-    <script src="{% static 'website/js/script.js' %}?v=20260325-2"></script>
-</body>
-</html
+
+
+
     <div class="project-modal" id="predictiaModal" aria-hidden="true">
         <div class="project-modal-backdrop" onclick="closeModal('predictiaModal')"></div>
         <div class="project-modal-box">
@@ -979,46 +977,46 @@
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div class="project-modal-content">
-                <span class="project-modal-kicker">Projet ferroviaire • Machine Learning</span>
-                <h3 class="project-modal-title">PredictIA</h3>
+                <span class="project-modal-kicker">Projet transport • Machine Learning</span>
+                <h3 class="project-modal-title">PredictIA — prédiction des retards ferroviaires</h3>
 
                 <p class="project-modal-text">
-                    PredictIA est un projet de data science consacré à la prédiction des retards ferroviaires. Il s’appuie sur un
-                    jeu de données structuré décrivant les axes ferroviaires, le type de service, la distance, la régularité,
-                    le nombre de trains, les retards observés, les suppressions, les incidents techniques, la signalisation,
-                    la météo, l’affluence voyageurs et plusieurs indicateurs d’exploitation.
+                    PredictIA est un projet de machine learning consacré à la prédiction des retards ferroviaires.
+                    L’objectif est d’exploiter des données historiques afin d’anticiper les situations susceptibles
+                    de provoquer un retard et de fournir une aide à la décision dans un contexte de transport.
                 </p>
 
                 <p class="project-modal-text">
-                    Le travail commence par une analyse exploratoire afin de comprendre la distribution des retards, les corrélations
-                    entre variables et les facteurs opérationnels pouvant influencer la ponctualité. Les données sont ensuite nettoyées,
-                    préparées et transformées pour entraîner des modèles de classification capables d’identifier les situations à risque.
+                    Le projet couvre l’ensemble du cycle data science : chargement du dataset, exploration initiale,
+                    analyse des variables, traitement des valeurs manquantes, préparation des données temporelles,
+                    création de la variable cible et construction de variables utiles pour les modèles.
                 </p>
 
                 <p class="project-modal-text">
-                    Une étape importante du projet repose sur le feature engineering temporel : extraction du mois, de l’année et du trimestre,
-                    encodage cyclique de la saisonnalité, création de variables de retard historique, lags, tendances et moyennes glissantes.
-                    Ces variables permettent au modèle d’exploiter l’historique et les dynamiques récurrentes du réseau ferroviaire.
+                    Plusieurs modèles supervisés sont entraînés et comparés, notamment Random Forest et XGBoost.
+                    Les performances sont évaluées à l’aide de métriques de classification, d’une matrice de confusion,
+                    de la courbe ROC-AUC, de la validation croisée et de l’analyse du surapprentissage.
                 </p>
 
                 <p class="project-modal-text">
-                    Plusieurs modèles ont été comparés, notamment la régression logistique, l’arbre de décision, Random Forest et XGBoost.
-                    Le projet inclut également une phase d’optimisation par GridSearchCV, une validation croisée et une évaluation complète
-                    à l’aide de métriques comme l’accuracy, la précision, le recall, le F1-score, la matrice de confusion et la courbe ROC-AUC.
+                    Une attention particulière est portée à l’interprétabilité du modèle grâce à l’analyse de l’importance
+                    des variables. Cette étape permet d’identifier les facteurs qui influencent le plus la prédiction
+                    d’un retard et de rendre le résultat plus exploitable.
                 </p>
 
                 <p class="project-modal-text">
-                    PredictIA démontre ma capacité à construire un pipeline machine learning complet : exploration des données,
-                    préparation, modélisation, comparaison d’algorithmes, optimisation, sauvegarde de modèles et interprétation des résultats
-                    dans un contexte métier concret lié à la performance du transport ferroviaire.
+                    Le meilleur modèle est sauvegardé avec ses fichiers associés afin d’être réutilisé dans une application
+                    prédictive ou dans un pipeline de prédiction batch.
                 </p>
 
                 <p class="project-modal-text">
-                    Technologies utilisées : Python, Pandas, Scikit-learn, Random Forest, XGBoost, GridSearchCV, Matplotlib, Seaborn,
-                    feature engineering temporel, classification et évaluation de modèles.
+                    Technologies utilisées : Python, Pandas, Scikit-learn, Random Forest, XGBoost, classification,
+                    validation croisée, ROC-AUC, matrice de confusion et sauvegarde de modèles.
                 </p>
             </div>
         </div>
     </div>
 
->
+    <script src="{% static 'website/js/script.js' %}?v=20260325-3"></script>
+</body>
+</html>

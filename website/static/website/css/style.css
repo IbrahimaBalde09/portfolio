@@ -1713,11 +1713,12 @@ body.modal-open {
     color:white;
 }
 
+
 .project-visual-predictia {
     background:
-        radial-gradient(circle at 22% 18%, rgba(56, 189, 248, 0.24), transparent 26%),
-        radial-gradient(circle at 82% 24%, rgba(34, 197, 94, 0.20), transparent 30%),
-        linear-gradient(135deg, #071824 0%, #0f4c81 42%, #16a34a 100%);
+        radial-gradient(circle at 20% 18%, rgba(56, 189, 248, 0.24), transparent 26%),
+        radial-gradient(circle at 82% 25%, rgba(34, 197, 94, 0.20), transparent 30%),
+        linear-gradient(135deg, #061529 0%, #0f3b68 42%, #0f766e 100%);
     min-height: 320px;
     position: relative;
     overflow: hidden;
@@ -1734,7 +1735,7 @@ body.modal-open {
 }
 
 .project-visual-predictia::after {
-    content: "AI";
+    content: "IA";
     position: absolute;
     left: 22px;
     top: 18px;
@@ -1744,4 +1745,3 @@ body.modal-open {
     color: white;
     z-index: 1;
 }
-
