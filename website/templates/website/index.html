@@ -191,16 +191,23 @@
     </a>
 </div>
 
-                    <div class="hero-socials">
-                        <a href="https://github.com/IbrahimaBalde09?tab=repositories" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-github"></i>
-                            GitHub
-                        </a>
-                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-linkedin"></i>
-                            LinkedIn
-                        </a>
-                    </div>
+                   <div class="hero-socials">
+    <a href="https://github.com/IbrahimaBalde09?tab=repositories"
+       target="_blank"
+       rel="noopener noreferrer"
+       onclick="gtag('event', 'click_github', {event_category: 'Social', event_label: 'Hero GitHub', transport_type: 'beacon'});">
+        <i class="fa-brands fa-github"></i>
+        GitHub
+    </a>
+
+    <a href="https://www.linkedin.com/"
+       target="_blank"
+       rel="noopener noreferrer"
+       onclick="gtag('event', 'click_linkedin', {event_category: 'Social', event_label: 'Hero LinkedIn', transport_type: 'beacon'});">
+        <i class="fa-brands fa-linkedin"></i>
+        LinkedIn
+    </a>
+</div>
 
                     <div class="hero-tags">
                         <span class="hero-tag"><i class="fa-solid fa-database"></i>Data Science</span>
@@ -424,7 +431,7 @@
                         </div>
 
                         <div class="project-actions">
-                            <button class="project-btn project-btn-primary" type="button" onclick="openModal('biAgentsModal')">
+                            <button class="project-btn project-btn-primary" type="button" onclick="gtag('event', 'open_project_multi_agents_bi', {event_category: 'Project', event_label: 'Plateforme Multi-Agents BI'}); openModal('biAgentsModal')">
                                 <i class="fa-solid fa-file-lines"></i>
                                 Description
                             </button>
@@ -484,7 +491,7 @@
                         </div>
 
                         <div class="project-actions">
-                            <button class="project-btn project-btn-primary" type="button" onclick="openModal('planningModal')">
+                            <button class="project-btn project-btn-primary" type="button" onclick="gtag('event', 'open_project_planning_ai', {event_category: 'Project', event_label: 'Planning médical IA'}); openModal('planningModal')">
                                 <i class="fa-solid fa-file-lines"></i>
                                 Description
                             </button>
@@ -538,7 +545,7 @@
                         </div>
 
                         <div class="project-actions">
-                            <button class="project-btn project-btn-primary" type="button" onclick="openModal('creditModal')">
+                            <button class="project-btn project-btn-primary" type="button" onclick="gtag('event', 'open_project_credit_scoring', {event_category: 'Project', event_label: 'Crédit scoring'}); openModal('creditModal')">
                                 <i class="fa-solid fa-file-lines"></i>
                                 Description
                             </button>
@@ -596,7 +603,7 @@
                         </div>
 
                         <div class="project-actions">
-                            <button class="project-btn project-btn-primary" type="button" onclick="openModal('predictiaModal')">
+                            <button class="project-btn project-btn-primary" type="button" onclick="gtag('event', 'open_project_predictrail_ia', {event_category: 'Project', event_label: 'PredictRail IA'}); openModal('predictiaModal')">
                                 <i class="fa-solid fa-file-lines"></i>
                                 Description
                             </button>
@@ -649,7 +656,7 @@
                         </div>
 
                         <div class="project-actions">
-                            <button class="project-btn project-btn-primary" type="button" onclick="openModal('spamModal')">
+                            <button class="project-btn project-btn-primary" type="button" onclick="gtag('event', 'open_project_spam_detection', {event_category: 'Project', event_label: 'Détection de mails malveillants'}); openModal('spamModal')">
                                 <i class="fa-solid fa-file-lines"></i>
                                 Description
                             </button>
@@ -705,7 +712,7 @@
                         </div>
 
                         <div class="project-actions">
-                            <button class="project-btn project-btn-primary" type="button" onclick="openModal('assurbotModal')">
+                            <button class="project-btn project-btn-primary" type="button" onclick="gtag('event', 'open_project_assurbot', {event_category: 'Project', event_label: 'AssurBot'}); openModal('assurbotModal')">
                                 <i class="fa-solid fa-file-lines"></i>
                                 Description
                             </button>
@@ -808,7 +815,7 @@
                         </div>
 
                         <div class="project-actions">
-                            <button class="project-btn project-btn-primary" type="button" onclick="openModal('logisticsModal')">
+                            <button class="project-btn project-btn-primary" type="button" onclick="gtag('event', 'open_project_logistics', {event_category: 'Project', event_label: 'Optimisation de tournées logistiques'}); openModal('logisticsModal')">
                                 <i class="fa-solid fa-file-lines"></i>
                                 Description
                             </button>
