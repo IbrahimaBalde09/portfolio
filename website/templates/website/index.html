@@ -173,16 +173,17 @@
         Voir mes projets
     </a>
 
-    <a href="{% static 'website/files/CV_Ibrahima_Balde.pdf' %}"
-       class="btn btn-secondary"
-       download
-       onclick="gtag('event', 'download_cv', {
-           'event_category': 'CV',
-           'event_label': 'CV_Ibrahima_Balde.pdf'
-       });">
-        <i class="fa-solid fa-download"></i>
-        Télécharger mon CV
-    </a>
+  <a href="{% static 'website/files/CV_Ibrahima_Balde.pdf' %}"
+   class="btn btn-secondary"
+   download
+   onclick="gtag('event', 'download_cv', {
+       event_category: 'CV',
+       event_label: 'CV_Ibrahima_Balde.pdf',
+       transport_type: 'beacon'
+   });">
+    <i class="fa-solid fa-download"></i>
+    Télécharger mon CV
+</a>
 
     <a href="#contact" class="btn btn-secondary">
         <i class="fa-solid fa-envelope"></i>
